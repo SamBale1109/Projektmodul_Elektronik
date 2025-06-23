@@ -1,0 +1,33 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/lukashebio/dev_ws/install/web_video_server/include/**",
+        "/home/lukashebio/dev_ws/install/serial_motor_demo_msgs/include/**",
+        "/home/lukashebio/dev_ws/install/ros2_control_odrive_hw/include/**",
+        "/home/lukashebio/dev_ws/install/ros2_odrive/include/**",
+        "/home/lukashebio/dev_ws/install/ros2_odrive_interfaces/include/**",
+        "/home/lukashebio/dev_ws/install/mecanum_robot_interfaces/include/**",
+        "/home/lukashebio/ros_open_cv_ws/install/web_video_server/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/lukashebio/dev_ws/src/diffdrive_bot_one/include/**",
+        "/home/lukashebio/dev_ws/src/onshape2urdf/include/**",
+        "/home/lukashebio/dev_ws/src/ros2_control_mecanum_controller/include/**",
+        "/home/lukashebio/dev_ws/src/ros2_control_odrive_hw/include/**",
+        "/home/lukashebio/dev_ws/src/ros2_odrive/include/**",
+        "/home/lukashebio/dev_ws/src/web_video_server/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
