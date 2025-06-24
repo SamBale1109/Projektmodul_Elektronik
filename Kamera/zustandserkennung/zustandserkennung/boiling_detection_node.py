@@ -9,14 +9,24 @@ import os
 import cv2
 from ultralytics import YOLO
 from ament_index_python import get_package_share_directory
-
+from rcl_interfaces.msg import ParameterDescriptor, FloatingPointRange
 
 class Boiling_detection_node(Node):
     def __init__(self):
         super().__init__("Boiling_detection_node")
 
-        self.declare_parameter("yolo_model",os.path.join(get_package_share_directory("zustandserkennung"),"models","best.pt"))
+        # Define the range: from 0.0 to 1.0 (inclusive)
+        float_range = FloatingPointRange(
+            from_value=0.0,
+            to_value=1.0,
+            step=0.0  # Step of 0.0 means "any value within range"
+        )
+
+        self.declare_parameter('confidance',value=0.8,descriptor=ParameterDescriptor(description="model confidance value from 0 to 1",floating_point_range=[float_range]))
+        self.declare_parameter("yolo_model",os.path.join(get_package_share_directory("zustandserkennung"),"models","bolt_detection.pt"))
         self.declare_parameter('show_img',False)
+
+        self.confidance = float(self.get_parameter("confidance").value)#get_parameter_value().string_value)
         self.model_filepath = self.get_parameter("yolo_model").get_parameter_value().string_value
         self.show_imgs = self.get_parameter('show_img').get_parameter_value().bool_value
         self.model = YOLO(self.model_filepath)
@@ -32,7 +42,7 @@ class Boiling_detection_node(Node):
     def image_callback(self,img_msg=Image):
         if img_msg != None:
             cv_image = self.bridge.imgmsg_to_cv2(img_msg, desired_encoding='bgr8')
-            results = self.model(cv_image, conf = 0.90)
+            results = self.model(cv_image, conf = self.confidance)
             annotated_frame = results[0].plot()
 
             if results[0].obb and len(results[0].obb.data) > 0:
