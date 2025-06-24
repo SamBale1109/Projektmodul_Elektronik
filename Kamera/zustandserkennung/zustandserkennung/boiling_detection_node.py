@@ -22,8 +22,8 @@ class Boiling_detection_node(Node):
             step=0.0  # Step of 0.0 means "any value within range"
         )
 
-        self.declare_parameter('confidance',value=0.8,descriptor=ParameterDescriptor(description="model confidance value from 0 to 1",floating_point_range=[float_range]))
-        self.declare_parameter("yolo_model",os.path.join(get_package_share_directory("zustandserkennung"),"models","bolt_detection.pt"))
+        self.declare_parameter('confidance',value=0.4,descriptor=ParameterDescriptor(description="model confidance value from 0 to 1",floating_point_range=[float_range]))
+        self.declare_parameter("yolo_model",os.path.join(get_package_share_directory("zustandserkennung"),"models","best4.pt"))
         self.declare_parameter('show_img',False)
 
         self.confidance = float(self.get_parameter("confidance").value)#get_parameter_value().string_value)

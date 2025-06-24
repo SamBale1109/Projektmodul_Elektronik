@@ -6,6 +6,7 @@ from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 
 import cv2
+import time
 
 def open_camera(start_index=0):
     index = start_index
@@ -44,6 +45,7 @@ def main(args=None):
             
             imageToTransmit = bridgeObject.cv2_to_imgmsg(capturedFrame,"bgr8")
             node.video_publisher.publish(imageToTransmit)
+            time.sleep(0.2)
 
 
     rclpy.spin(node)
