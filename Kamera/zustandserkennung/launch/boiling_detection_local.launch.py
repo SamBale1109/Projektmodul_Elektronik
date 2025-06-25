@@ -9,7 +9,7 @@ from launch.conditions import IfCondition
 pkg_dir = get_package_share_directory("zustandserkennung")
 
 ARGUMENTS = [
-	DeclareLaunchArgument('yolo_model',default_value=os.path.join(pkg_dir,"models","best4.pt"),
+	DeclareLaunchArgument('yolo_model',default_value=os.path.join(pkg_dir,"models","boil_detection.pt"),
         description='Full path to the object detection model that should be used'),
 
 
@@ -24,6 +24,7 @@ def generate_launch_description():
         package="zustandserkennung",
         executable="camera_publisher",
         output="screen",
+        parameters=[{"camera_idx": 3}],
         remappings=[("camera/color/image_raw", "usb_cam/image_raw")]
     )
     
@@ -37,7 +38,7 @@ def generate_launch_description():
         remappings=[("/camera/color/image_raw","usb_cam/image_raw")]
     )
     
-    rviz_config_file = os.path.join(pkg_dir,'config','rviz_image_display.rviz')
+    rviz_config_file = os.path.join(pkg_dir,'config','image_display.rviz')
     launch_rviz2 = Node(
         package='rviz2',
         executable='rviz2',
