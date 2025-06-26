@@ -72,12 +72,14 @@ Beispielbilder mit erfolgreicher Objekterkennung werden im Anhang dargestellt un
 ## 📦 Ressourcen & Verweise
 
 - **Roboflow Dataset & Training:**  
-  👉 [Link zum Roboflow-Projekt einfügen]
+  👉 [https://app.roboflow.com/projektmodulelektronik/boiling_detection/2]
 
 - **Quellcodes (Beiliegend):**
   - YOLOv8-Trainingsskript
-  - Detektionsskript (Python)
-  - ROS2 Node Integration (`zustandserkennung_node.py`)
+  - [Detektionsskript (Python)](https://github.com/SamBale1109/Projektmodul_Elektronik/blob/main/Kamera/zustandserkennung/zustandserkennung/webcam_detection.py)
+  - [ROS2 Node zu Objekterkennung](https://github.com/SamBale1109/Projektmodul_Elektronik/blob/main/Kamera/zustandserkennung/zustandserkennung/boiling_detection_node.py)
+  - [ROS2 Node zum USB-Kamera auslesen](https://github.com/SamBale1109/Projektmodul_Elektronik/blob/main/Kamera/zustandserkennung/zustandserkennung/camera_publisher.py)
+  - [ROS2 launch file zum Start auf Raspberry Pi](https://github.com/SamBale1109/Projektmodul_Elektronik/blob/main/Kamera/zustandserkennung/zustandserkennung/boiling_detection_node.py)
 
 ---
 
