@@ -1,6 +1,6 @@
-# Projektmodul_Elektronik
+# Kochfeld Zustandserkennung Node
 
-Repository for ROS2 Humble Package zur Zustandsüberwachung einer Herdplatte mittels USB Kamera und YOLOv11
+ROS2 Humble Package zur Zustandsüberwachung einer Herdplatte mittels USB Kamera und YOLOv11
 
 ## Dependencies
 benötigte system dependencies können mit rosdep installiert werden:
