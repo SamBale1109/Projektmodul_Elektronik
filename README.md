@@ -2,9 +2,9 @@
 
 ## 🧠 Projektmodul Elektronik – Motivation und Zielsetzung
 
-Ein häufiges Problem im Alltag älterer Menschen ist das Vergessen von eingeschalteten Herdplatten. Oft wird ein Topf auf dem Herd abgestellt und das Kochfeld eingeschaltet, während parallel andere Tätigkeiten ausgeführt werden. In solchen Fällen kann es vorkommen, dass das Kochgut überkocht oder sogar anbrennt, was ein erhebliches Sicherheitsrisiko darstellt.
+Ein häufiges Problem im Alltag älterer Menschen ist das Vergessen von eingeschalteten Herdplatten. Oft wird ein Topf auf dem Herd abgestellt und das Kochfeld eingeschaltet, während parallel andere Tätigkeiten ausgeführt werden. In solchen Fällen kann es vorkommen, dass das Kochgut überkocht oder anbrennt, was ein erhebliches Sicherheitsrisiko darstellt.
 
-**Ziel des Projekts** ist die Entwicklung einer kamerabasierten, KI-gestützten Lösung, die den Kochvorgang in Echtzeit überwacht. Die Anwendung soll erkennen, ob sich ein Topf auf dem Herd befindet und ob dessen Inhalt bereits kocht. Bei Erreichen eines definierten Kochzustands soll ein digitales Signal erzeugt werden, das perspektivisch zur Ansteuerung eines Alarms oder zur automatischen Abschaltung genutzt werden kann.
+**Ziel des Projekts** ist die Entwicklung einer kamerabasierten, KI-gestützten Lösung, die den Kochvorgang in Echtzeit überwacht. Die Anwendung soll durch Auswerten der Bilder einer über der Kochplatte montierten Kamera erkennen, ob sich ein Topf auf dem Herd befindet und ob dessen Inhalt bereits kocht. Bei Erreichen eines definierten Kochzustands soll ein digitales Signal erzeugt werden, das perspektivisch zur Ansteuerung eines Alarms oder zur automatischen Abschaltung genutzt werden kann.
 
 ---
 
@@ -40,7 +40,7 @@ Ein Python-Skript zur Laufzeit-Auswertung:
 ### 5. 🔁 ROS2-Integration
 - Installation von **ROS2 Humble** auf dem Raspberry Pi.
 - Umwandlung des Python-Skripts in eine **ROS2 Node**.
-- Zustände werden als ROS-Nachrichten im Netzwerk veröffentlicht.
+- Zustände bzw. Bilder werden als ROS-Nachrichten im Netzwerk veröffentlicht.
 - Ermöglicht Kommunikation mit:
   - Benutzeroberflächen
   - Aktuatoren (z. B. Alarmgeber)
@@ -71,11 +71,11 @@ Beispielbilder mit erfolgreicher Objekterkennung werden im Anhang dargestellt un
 
 ## 📦 Ressourcen & Verweise
 
-- **Roboflow Dataset & Training:**  
+- **Roboflow Dataset:**  
   👉 [https://app.roboflow.com/projektmodulelektronik/boiling_detection/2]
 
 - **Quellcodes (Beiliegend):**
-  - YOLOv8-Trainingsskript
+  - [YOLOv8-Trainingsskript](https://github.com/SamBale1109/Projektmodul_Elektronik/blob/main/Kamera/zustandserkennung/zustandserkennung/yolov8_obb_train.py)
   - [Detektionsskript (Python)](https://github.com/SamBale1109/Projektmodul_Elektronik/blob/main/Kamera/zustandserkennung/zustandserkennung/webcam_detection.py)
   - [ROS2 Node zu Objekterkennung](https://github.com/SamBale1109/Projektmodul_Elektronik/blob/main/Kamera/zustandserkennung/zustandserkennung/boiling_detection_node.py)
   - [ROS2 Node zum USB-Kamera auslesen](https://github.com/SamBale1109/Projektmodul_Elektronik/blob/main/Kamera/zustandserkennung/zustandserkennung/camera_publisher.py)
