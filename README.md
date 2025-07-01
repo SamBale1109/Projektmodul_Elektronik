@@ -49,6 +49,13 @@ Ein Python-Skript zur Laufzeit-Auswertung:
 
 ---
 
+## visualisierung
+
+- Zustandserkennung mit tracking der Dauer des aktuellen Zustands
+![](https://github.com/SamBale1109/Projektmodul_Elektronik/blob/main/doc/Example_detection.png)
+- Robuste Erkennung auch bei geometrie verdeckenden Gegenständen z.B Löffel
+- ![](
+
 ## 🚀 Weiterführende Arbeiten und Ausblick
 
 - Einführung zusätzlicher Zustände wie:
