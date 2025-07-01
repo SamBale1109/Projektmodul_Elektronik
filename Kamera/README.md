@@ -30,3 +30,5 @@ ros2 run zustandserkennung camera_publisher
 ```
 ros2 run zustandserkennung boiling_detection_node
 ```
+
+© Projektmodul MEM – [Lukas Sambale / Projektgruppe Elektronik], 2025 
