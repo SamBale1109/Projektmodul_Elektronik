@@ -41,6 +41,7 @@ Ein Python-Skript zur Laufzeit-Auswertung:
 - Installation von **ROS2 Humble** auf dem Raspberry Pi.
 - Umwandlung des Python-Skripts in eine **ROS2 Node**.
 - Zustände bzw. Bilder werden als ROS-Nachrichten im Netzwerk veröffentlicht.
+- [Anleitung](https://github.com/SamBale1109/Projektmodul_Elektronik/blob/main/Kamera/README.md) zu Setup und Verwendung der Node
 - Ermöglicht Kommunikation mit:
   - Benutzeroberflächen
   - Aktuatoren (z. B. Alarmgeber)
