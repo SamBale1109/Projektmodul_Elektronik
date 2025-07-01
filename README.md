@@ -41,7 +41,7 @@ Ein Python-Skript zur Laufzeit-Auswertung:
 - Installation von **ROS2 Humble** auf dem Raspberry Pi.
 - Umwandlung des Python-Skripts in eine **ROS2 Node**.
 - Zustände bzw. Bilder werden als ROS-Nachrichten im Netzwerk veröffentlicht.
-- [Anleitung](https://github.com/SamBale1109/Projektmodul_Elektronik/blob/main/Kamera/README.md) zu Setup und Verwendung der Node
+- [Anleitung](Kamera/README.md) zu Setup und Verwendung der Node
 - Ermöglicht Kommunikation mit:
   - Benutzeroberflächen
   - Aktuatoren (z. B. Alarmgeber)
@@ -49,12 +49,13 @@ Ein Python-Skript zur Laufzeit-Auswertung:
 
 ---
 
-## visualisierung
+## 🖼️ Visualisierung
 
 - Zustandserkennung mit tracking der Dauer des aktuellen Zustands
-![](https://github.com/SamBale1109/Projektmodul_Elektronik/blob/main/doc/Example_detection.png)
-- Robuste Erkennung auch bei geometrie verdeckenden Gegenständen z.B Löffel
-- ![](
+![](doc/Example_detection.png)
+- Robuste Erkennung auch bei geometrie verdeckenden Gegenständen z.B Löffel oder Topfdeckel
+![](doc/Expample_detection_mitloeffel.png)
+![](doc/Example_detection_Deckel.png)
 
 ## 🚀 Weiterführende Arbeiten und Ausblick
 
@@ -67,27 +68,17 @@ Ein Python-Skript zur Laufzeit-Auswertung:
 
 ---
 
-## 🖼️ Visualisierung
-
-Beispielbilder mit erfolgreicher Objekterkennung werden im Anhang dargestellt und demonstrieren die praktische Funktionalität:
-
-- 🟩 Gitterdarstellung zur Herdplattenerkennung  
-- 🔵 Markierung der erkannten Töpfe  
-- 🔴 Zustandsanzeige (kochend/nicht kochend)
-
----
-
 ## 📦 Ressourcen & Verweise
 
 - **Roboflow Dataset:**  
   👉 [https://app.roboflow.com/projektmodulelektronik/boiling_detection/2]
 
 - **Quellcodes (Beiliegend):**
-  - [YOLOv8-Trainingsskript](https://github.com/SamBale1109/Projektmodul_Elektronik/blob/main/Kamera/zustandserkennung/zustandserkennung/yolov8_obb_train.py)
-  - [Detektionsskript (Python)](https://github.com/SamBale1109/Projektmodul_Elektronik/blob/main/Kamera/zustandserkennung/zustandserkennung/webcam_detection.py)
-  - [ROS2 Node zu Objekterkennung](https://github.com/SamBale1109/Projektmodul_Elektronik/blob/main/Kamera/zustandserkennung/zustandserkennung/boiling_detection_node.py)
-  - [ROS2 Node zum USB-Kamera auslesen](https://github.com/SamBale1109/Projektmodul_Elektronik/blob/main/Kamera/zustandserkennung/zustandserkennung/camera_publisher.py)
-  - [ROS2 launch file zum Start auf Raspberry Pi](https://github.com/SamBale1109/Projektmodul_Elektronik/blob/main/Kamera/zustandserkennung/zustandserkennung/boiling_detection_node.py)
+  - [YOLOv8-Trainingsskript](Kamera/zustandserkennung/zustandserkennung/yolov8_obb_train.py)
+  - [Detektionsskript (Python)](Kamera/zustandserkennung/zustandserkennung/webcam_detection.py)
+  - [ROS2 Node zu Objekterkennung](Kamera/zustandserkennung/zustandserkennung/boiling_detection_node.py)
+  - [ROS2 Node zum USB-Kamera auslesen](Kamera/zustandserkennung/zustandserkennung/camera_publisher.py)
+  - [ROS2 launch file zum Start auf Raspberry Pi](Kamera/zustandserkennung/zustandserkennung/boiling_detection_node.py)
 
 ---
 
