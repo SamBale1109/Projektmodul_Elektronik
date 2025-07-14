@@ -1,3 +1,7 @@
+# Programm: webcam_detection.py
+# Autor: Lukas Sambale
+# Datum: 26.06.2025
+
 import cv2
 from ultralytics import YOLO
 from pathlib import Path
