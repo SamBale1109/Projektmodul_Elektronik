@@ -1,3 +1,7 @@
+# Programm: boiling_detection_local.launch.py
+# Autor: Lukas Sambale
+# Datum: 26.06.2025
+
 from launch_ros.actions import Node
 from launch import LaunchDescription
 import os
