@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# Programm: camera_publisher.py
+# Autor: Lukas Sambale
+# Datum: 26.06.2025
+
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Image
