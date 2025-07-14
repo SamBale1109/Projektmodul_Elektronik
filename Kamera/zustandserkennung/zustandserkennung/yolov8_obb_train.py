@@ -1,3 +1,7 @@
+# Programm: yolov8_obb_train.py
+# Autor: Lukas Sambale
+# Datum: 26.06.2025
+
 from ultralytics import YOLO
 from pathlib import Path
 import os
