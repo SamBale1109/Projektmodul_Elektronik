@@ -1,4 +1,7 @@
 #!usr/bin/env
+# Programm: boiling_detection_node.py
+# Autor: Lukas Sambale
+# Datum: 26.06.2025
 
 import rclpy
 from rclpy.node import Node
